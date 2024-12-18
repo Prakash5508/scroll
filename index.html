@@ -1,98 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation bar</title>
-    <link rel="stylesheet"
-     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll</title>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header id="home">
-        <nav id="nav">
-            <div class="nav-center">
-                <div class="nav-header">
-                    <img src="logo.jpeg" alt="Logo">
-                    <button class="nav-toggle">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-                <div class="links-container">
-                    <ul class="links">
-                        <li>
-                            <a href="#home" class="scroll-link">Home</a>
-                        </li>
-                        <li>
-                            <a href="#about" class="scroll-link">About</a>
-                        </li>
-                        <li>
-                            <a href="#services" class="scroll-link">Services</a>
-                        </li>
-                        <li>
-                            <a href="#tour" class="scroll-link">Tour</a>
-                        </li>
-                        <li>
-                            <a href="#contact" class="scroll-link">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div class="banner">
-            <div class="container">
-                <h1>Welcome to our website</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi suscipit, dignissimos aspernatur fugit quia quibusdam exercitationem, eaque animi repudiandae, mollitia pariatur harum odio porro ipsum iste error quos quod molestias rerum! Odit incidunt, sapiente dicta tempore voluptatibus, fugiat nisi fugit labore expedita eos optio voluptatum voluptates! Quas provident molestiae ad.</p>
-                <a href="#tour" class="scroll-link btn btn-white">explore Tours</a>
-            </div>
+      
+      <nav id="nav">
+        <div class="nav-center">
+          
+          <div class="nav-header">
+            <img src="./photo/logos.png" class="logo" alt="logo" />
+            <button class="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          
+          <div class="links-container">
+            <ul class="links">
+              <li>
+                <a href="#home" class="scroll-link">home</a>
+              </li>
+              <li>
+                <a href="#about" class="scroll-link">about</a>
+              </li>
+              <li>
+                <a href="#services" class="scroll-link">services</a>
+              </li>
+              <li>
+                <a href="#tours" class="scroll-link">tours</a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </nav>
+      
+      <div class="banner">
+        <div class="container">
+          <h1>scroll project</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas eos
+            neque sunt in? Id, necessitatibus quos quisquam distinctio
+            laudantium fugiat?
+          </p>
+          <a href="#tours" class="scroll-link btn btn-white">explore tours</a>
+        </div>
+      </div>
     </header>
+    
     <section id="about" class="section">
-        <div class="title">
-            <h2>About <span> us </span></h2>
-        </div>
+      <div class="title">
+        <h2>about <span>us</span></h2>
+      </div>
     </section>
+    
     <section id="services" class="section">
-        <div class="title">
-            <h2>Our <span> Services </span></h2>
-        </div>
+      <div class="title">
+        <h2>our <span>services</span></h2>
+      </div>
     </section>
-    <section id="tour" class="section">
-        <div class="title">
-            <h2>Our <span> Tours </span></h2>
-        </div>
+    
+    <section id="tours" class="section">
+      <div class="title">
+        <h2>featured <span>tours</span></h2>
+
+        <div class="button-container">
+            <button class="tour-button" id="trekking">Trekking</button>
+            <button class="tour-button" id="mountain">Mountain</button>
+            <button class="tour-button" id="swimming">Swimming</button>
+          </div>
+
+          <div id="tour-content">
+
+            <div class="tour-section" id="trekking-content" style="display: none; flex-direction: row;">
+                
+              <img src="./photo/trip.jpeg" alt="Trekking" />
+              <p><b>1. Understanding Trekking</b><br> <br><b>Definition:</b><br> Trekking refers to a long, adventurous journey undertaken on foot, often in remote or mountainous areas. Unlike casual hiking, trekking usually involves multi-day trips and can include challenging terrains.<br><br><b>Cultural Significance:</b><br>Trekking is deeply rooted in many cultures, often serving as a means of connecting with nature, exploring heritage sites, and engaging with local communities.<br>
+                <br><b>2. Benefits of Trekking</b><br>
+                <br><b>Physical Benefits:</b><br>Trekking improves heart health(Cardiovascular Fitness) by increasing cardiovascular endurance.It strengthens muscles, particularly in the legs, core, and back.Regular trekking can aid in weight loss and management.<br>
+                <br><b>Mental Benefits:</b><br>Being in nature reduces stress levels and promotes relaxation.Trekking encourages mindfulness, allowing individuals to focus on the present moment.Physical activity releases endorphins, which can enhance mood and combat depression.<br>
+                <br><b>Social Connections:</b><br>Trekking often involves group activities, fostering friendships and community bonds.Trekking in different regions allows for interaction with diverse cultures and traditions.<br>
+                <br><b>3. Preparing for a Trek</b><br>
+                <br><b>Physical Preparation:</b><br>Engage in regular cardiovascular and strength training exercises to build endurance and strength.Engage in regular cardiovascular and strength training exercises to build endurance and strength.<br><br><b>Gear and Equipment:</b><br> Invest in high-quality trekking boots that provide support and comfort.Dress in layers to adapt to changing weather conditions. Use moisture-wicking fabrics and waterproof outer layers.Choose a comfortable backpack with adequate capacity for your gear.<br>
+                <br><b>Nutrition and Hydration:</b><br>Consume a diet rich in carbohydrates, proteins, and healthy fats to fuel your body.Carry sufficient water and consider water purification methods for longer treks.<br>
+                <br><b>4. Safety Considerations</b><br>
+                <br><b>Research and Planning:</b><br>Gather information about the trail, including difficulty, weather conditions, and potential hazards.Check if permits are required for your chosen trek.<br>
+                <br><b>Emergency Preparedness:</b><br>Carry a well-stocked first aid kit and know basic first aid procedures.Inform someone about your trekking plans and expected return time.
+
+
+              </p>
+            </div>
+            <div class="tour-section" id="mountain-content" style="display: none;">
+              
+              <img src="photo/moun.jpeg" alt="Mountain" />
+              <p>Conquer the peaks and enjoy breathtaking views from the top.</p>
+            </div>
+            <div class="tour-section" id="swimming-content" style="display: none;">
+              
+              <img src="path/to/swimming.jpg" alt="Swimming" />
+              <p>Relax and have fun in the water with our swimming tours.</p>
+            </div>
+        <!-- <div class="dropdown">
+            <button class="dropbtn">Select Tour</button>
+            <div class="dropdown-content">
+              <a href="#trekking">Trekking</a>
+
+              <a href="#swimming">Swimming</a>
+              
+              <a href="#mountain">Mountain</a>
+            </div>
+          </div> -->
+      </div>
     </section>
+    
     <footer class="section">
-        <p>
-            copyright &copy; travel tours company
+      <p>
+        copyright &copy; <a rel="Prakash" href="https://www.instagram.com/prakash_kr_08/" style="color: var(--clr-secondary);">Prakash</a> travel tours company
         <span id="date"></span>. all rights reserved
-        </p>
+      </p>
     </footer>
     <a class="scroll-link top-link" href="#home">
-        <i class="fas fa-arrow-up"></i>
+      <i class="fas fa-arrow-up"></i>
     </a>
+    
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
