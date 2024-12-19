@@ -26,19 +26,7 @@ var navbar = document.getElementById("nav");
 var topLink = document.querySelector(".top-link");
 window.addEventListener("scroll", function () {
   var scrollHeight = window.pageYOffset;
-  var navHeight = navbar.getBoundingClientRect().height; //   if (scrollHeight > navHeight) {
-  //     navbar.classList.add("fixed-nav");
-  //   } else {
-  //     navbar.classList.remove("fixed-nav");
-  //   }
-  // setup back to top link
-  //   if (scrollHeight > 500) {
-  //     console.log("helo");
-  //     topLink.classList.add("show-link");
-  //   } else {
-  //     topLink.classList.remove("show-link");
-  //   }
-  // });
+  var navHeight = navbar.getBoundingClientRect().height;
 
   if (scrollHeight > navHeight) {
     navbar.classList.add("nav-color");
@@ -53,16 +41,22 @@ window.addEventListener("scroll", function () {
     topLink.classList.remove("show-link");
   }
 }); // ********** smooth scroll ************
-// select links
 
 var scrollLinks = document.querySelectorAll(".scroll-link");
 scrollLinks.forEach(function (link) {
   link.addEventListener("click", function (e) {
-    // prevent default
-    e.preventDefault(); // navigate to specific spot
+    e.preventDefault(); // Prevent default anchor click behavior
 
-    var id = e.currentTarget.getAttribute("href").slice(1);
-    var element = document.getElementById(id);
+    var id = e.currentTarget.getAttribute("href").slice(1); // Get the target section ID
+
+    var element = document.getElementById(id); // Get the target section element
+    // Scroll to the target section
+
+    element.scrollIntoView({
+      behavior: "smooth"
+    }); //   });
+    // });
+
     var navHeight = navbar.getBoundingClientRect().height;
     var containerHeight = linksContainer.getBoundingClientRect().height;
     var fixedNav = navbar.classList.contains("fixed-nav");
@@ -111,37 +105,22 @@ function calculateHeights() {
     link.style.top = "".concat(position, "px");
     link.style.height = "".concat(elementHeight, "px");
   });
-} // Close the dropdown if the user clicks outside of it
-// window.onclick = function(event) {
-//     if (!event.target.matches('.dropbtn')) {
-//       var dropdowns = document.getElementsByClassName("dropdown-content");
-//       for (var i = 0; i < dropdowns.length; i++) {
-//         var openDropdown = dropdowns[i];
-//         if (openDropdown.style.display === "block") {
-//           openDropdown.style.display = "none";
-//         }
-//       }
-//     }
-//   }
+}
 
+document.getElementById('trekking').addEventListener('click', function (e) {
+  e.preventDefault(); // Prevent default anchor click behavior
 
-document.getElementById('trekking').addEventListener('click', function () {
-  window.location.href = '#trekking'; // Change this to the appropriate section ID
-});
-document.getElementById('mountain').addEventListener('click', function () {
-  window.location.href = '#mountain'; // Change this to the appropriate section ID
-});
-document.getElementById('swimming').addEventListener('click', function () {
-  window.location.href = '#swimming'; // Change this to the appropriate section ID
-});
-document.getElementById('trekking').addEventListener('click', function () {
   showContent('trekking-content');
 });
-document.getElementById('mountain').addEventListener('click', function () {
+document.getElementById('mountain').addEventListener('click', function (e) {
+  e.preventDefault(); // Prevent default anchor click behavior
+
   showContent('mountain-content');
 });
-document.getElementById('swimming').addEventListener('click', function () {
-  showContent('swimming-content');
+document.getElementById('beaches').addEventListener('click', function (e) {
+  e.preventDefault(); // Prevent default anchor click behavior
+
+  showContent('beaches-content');
 });
 
 function showContent(contentId) {
@@ -152,4 +131,26 @@ function showContent(contentId) {
   }); // Show the selected tour section
 
   document.getElementById(contentId).style.display = 'flex';
-}
+} // slider for img
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  var tourButtons = document.querySelectorAll('.tour-button');
+  var tourSections = document.querySelectorAll('.tour-section');
+  tourButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      // Hide all tour sections
+      tourSections.forEach(function (section) {
+        section.style.display = 'none';
+        section.classList.remove('show'); // Remove show class
+      }); // Show the selected tour section
+
+      var selectedTour = document.getElementById(button.id + '-content');
+      selectedTour.style.display = 'flex'; // or 'block' depending on your layout
+
+      setTimeout(function () {
+        selectedTour.classList.add('show'); // Add show class after display
+      }, 10); // Small timeout to allow display to take effect
+    });
+  });
+});

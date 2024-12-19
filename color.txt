@@ -41,3 +41,70 @@
   --max-width: 1170px;
   --fixed-width: 620px;
 }
+
+
+
+
+////css
+.section {
+  padding: 2rem 0;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn-submit {
+  background-color: var(--clr-secondary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: darken(var(--clr-secondary), 10%);
+}
+
+
+
+
+///js
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Get form values
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+
+  // Here you can handle the form submission, e.g., send it to a server
+  console.log('Form submitted:', { name, email, message });
+
+  // Clear the form
+  this.reset();
+
+  // Optionally, show a success message
+  alert('Thank you for your message! We will get back to you soon.');
+});
